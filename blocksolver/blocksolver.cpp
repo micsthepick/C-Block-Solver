@@ -1,21 +1,37 @@
-// blocksolver.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
-#include "pch.h"
 #include <iostream>
+#include <boost/timer/timer.hpp>
+#include "Piece.h"
+
+// TODO sketch out inputs/outputs
+int apply3DTransform(int input, int transform)
+{
+	return input + transform; // TODO
+}
 
 int main()
 {
-    std::cout << "Hello World!\n"; 
+	// Program timer
+	boost::timer::cpu_timer timer;
+
+	// should define grid and pieces externally
+	const int DEPTH = 4;
+	const int HEIGHT = 4;
+	const int WIDTH = 4;
+
+
+	// Stores pieces to solve
+	//Piece3D pieces[12] = Piece3D [];
+	// this will have to change, as there is not always 12 pieces
+
+	
+
+    std::cout << "Finished definitions.\n";
+	std::cout << "Time: " << timer.format();
+	timer.start();
+
+	std::cout << "Finished.\n";
+	std::cout << "Time: " << timer.format();
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
 
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+// ideas: xml file for grid and pieces
